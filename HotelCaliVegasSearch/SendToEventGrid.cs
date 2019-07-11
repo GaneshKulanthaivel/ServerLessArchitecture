@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Azure.WebJobs.Host;
 using Microsoft.Extensions.Logging;
-using TollBooth.Models;
+
 
 namespace TollBooth
 {
@@ -22,7 +22,7 @@ namespace TollBooth
             _client = client;
         }
 
-        public async Task SendLicensePlateData(LicensePlateData data)
+        /*public async Task SendLicensePlateData(LicensePlateData data)
         {
             // Will send to one of two routes, depending on success.
             // Event listeners will filter and act on events they need to
@@ -66,6 +66,6 @@ namespace TollBooth
             await _client.PostAsJsonAsync(uri, events);
 
             _log.LogInformation($"Sent the following to the Event Grid topic: {events[0]}");
-        }
+        }*/
     }
 }
